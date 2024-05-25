@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Haruno Official Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Transport for Yogyakarta</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn">k</i>
+            </div>
+            <a href="#">Home</a>
+            <a href="https://www.s.id/TransitMapYK">Unduh Peta</a>
+            <a href="https://www.instagram.com/transportforyogya/">Instagram</a>
+            <a href="https://www.t.me/fdtyogyakarta">Telegram</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+    <section class="section-main">
+        <div class="kontener">
+            <div class="konten">
+                <div class="main-title"> </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-two">
+        <div class="container">
+                <h2>Projects</h2>
+                <p>We contribute lot of things to Yogyakarta's Public Transportation. Such as making maps, wayfindings, setting up the announcement system, and much more.</p>
+            </div>
+        </div>
+    </section>
+
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+
+            var menu = document.querySelector('.menu');
+            var menuBtn = document.querySelector('.menu-btn');
+            var closeBtn = document.querySelector('.close-btn')
+
+            menuBtn.addEventListener("click", () => {
+                menu.classList.add('active');
+            });
+            closeBtn.addEventListener("click", () => {
+                menu.classList.remove('active');
+            });
+        </script>
+        <script>
+            ScrollReveal({ 
+                reset: true,
+                distance: '60px',
+                duration: 2500,
+                delay: 400
+            });
+
+            ScrollReveal().reveal('.main-title, .container', { delay: 500, origin: 'left' });
+            
+        </script>
+</body>
+</html>
